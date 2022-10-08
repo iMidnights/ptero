@@ -1,4 +1,4 @@
-FROM        --platform=$TARGETOS/$TARGETARCH jarredsumner/bun:edge
+FROM        jarredsumner/bun:edge
 
 LABEL       author="Michael Parker" maintainer="parker@pterodactyl.io"
 
