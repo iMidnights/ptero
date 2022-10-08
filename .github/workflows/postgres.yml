@@ -39,7 +39,7 @@ jobs:
         with:
           context: ./postgres
           file: ./postgres/${{ matrix.tag }}/Dockerfile
-          platforms: linux/amd64,linux/arm64
+          platforms: linux/arm64
           push: true
           tags: |
-            ghcr.io/parkervcp/yolks:postgres_${{ matrix.tag }}
+            ghcr.io/imidnights/yolks:postgres_${{ matrix.tag }}

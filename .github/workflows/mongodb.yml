@@ -36,7 +36,7 @@ jobs:
         with:
           context: ./mongodb
           file: ./mongodb/${{ matrix.tag }}/Dockerfile
-          platforms: linux/amd64,linux/arm64
+          platforms: linux/arm64
           push: true
           tags: |
-            ghcr.io/parkervcp/yolks:mongodb_${{ matrix.tag }}
+            ghcr.io/imidnights/yolks:mongodb_${{ matrix.tag }}
