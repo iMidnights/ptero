@@ -1,4 +1,4 @@
-FROM         --platform=$TARGETOS/$TARGETARCH debian:bullseye-slim
+FROM         --platform=$TARGETOS/$TARGETARCH ich777/mono-baseimage:latest_arm64
 
 LABEL        author="Michael Parker" maintainer="parker@pterodactyl.io"
 
