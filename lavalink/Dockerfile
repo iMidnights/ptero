@@ -14,4 +14,4 @@ ENV         USER=container HOME=/home/container
 WORKDIR     /home/container
 
 COPY        ./../entrypoint.sh /entrypoint.sh
-CMD         if [[ $(md5sum ./Lavalink.jar) == *87a0b32723282d074081daac41877f59* ]]; then echo "Valid MD5"; fi
+CMD         if [[ $(md5sum ./Lavalink.jar) == *87a0b32723282d074081daac41877f59* ]]; then /bin/bash; /entrypoint.sh; fi; echo test
