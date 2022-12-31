@@ -3,7 +3,7 @@
 cd /home/container;
 
 if [[ ! -f Lavalink.jar ]]; then
-	curl -L -o Lavalink.jar https://github.com/freyacodes/Lavalink/releases/latest/download/Lavalink.jar
+	curl -L -o Lavalink.jar https://github.com/freyacodes/Lavalink/releases/download/3.6.2/Lavalink.jar
 fi;
 
 if [[ ! -f application.yml ]]; then
@@ -14,5 +14,9 @@ if [[ $(md5sum Lavalink.jar) =~ 87a0b32723282d074081daac41877f59 ]]; then
 	echo Approved;
 	java -jar Lavalink.jar
 else
-	echo Lavalink.jar has been tampered with. Please download version 3.6.2 from GitHub.;
+	echo This egg is for Lavalink only, we've detected you've attempted to replace the JAR file.;
+	echo Downloading Lavalink 3.6.2
+	
+	curl -L -o Lavalink.jar https://github.com/freyacodes/Lavalink/releases/download/3.6.2/Lavalink.jar
+	java -jar Lavalink.jar
 fi
