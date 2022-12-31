@@ -18,5 +18,9 @@ else
 	echo Downloading Lavalink 3.6.2
 	
 	curl -L -o Lavalink.jar https://github.com/freyacodes/Lavalink/releases/download/3.6.2/Lavalink.jar
-	java -jar Lavalink.jar
+	if [[ $(md5sum Lavalink.jar) =~ 87a0b32723282d074081daac41877f59 ]]; then
+		java -jar Lavalink.jar;
+	else
+		echo You modified the file again.. in 3 seconds.. really?
+	fi;
 fi
