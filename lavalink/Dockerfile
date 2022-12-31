@@ -14,4 +14,4 @@ ENV         USER=container HOME=/home/container
 WORKDIR     /home/container
 
 COPY        ./../entrypoint.sh /entrypoint.sh
-CMD			if [[ $(md5sum /home/container/Lavalink.jar) =~ 87a0b32723282d074081daac41877f59 ]]; then echo Approved; else echo Lavalink.jar has been tampered with. Please download version 3.6.2 from GitHub.; fi
+CMD         [ "/bin/bash", "/entrypoint.sh" ]
