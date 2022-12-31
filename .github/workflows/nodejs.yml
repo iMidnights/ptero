@@ -41,4 +41,4 @@ jobs:
           platforms: linux/arm64
           push: true
           tags: |
-            ghcr.io/imidnights/yolks:nodejs_${{ matrix.tag }}
+            ghcr.io/imidnights/ptero:nodejs_${{ matrix.tag }}

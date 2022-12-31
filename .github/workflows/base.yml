@@ -38,4 +38,4 @@ jobs:
           platforms: linux/arm64
           push: true
           tags: |
-            ghcr.io/imidnights/yolks:${{ matrix.oses }}
+            ghcr.io/imidnights/ptero:${{ matrix.oses }}
