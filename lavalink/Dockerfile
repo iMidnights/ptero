@@ -1,9 +1,6 @@
 FROM        --platform=$TARGETOS/$TARGETARCH openjdk:11-slim
 
-LABEL       author="Michael Parker" maintainer="parker@pterodactyl.io"
-
-LABEL       org.opencontainers.image.source="https://github.com/pterodactyl/yolks"
-LABEL       org.opencontainers.image.licenses=MIT
+LABEL       author="Chris Greene" maintainer="plain@sharkybot.xyz"
 
 RUN         apt update -y \
 						&& apt install -y curl ca-certificates openssl git tar sqlite3 fontconfig tzdata iproute2 libfreetype6 \
