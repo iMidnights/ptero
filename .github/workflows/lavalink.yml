@@ -10,7 +10,7 @@ on:
       - lavalink/*
 jobs:
   push:
-    name: "yolks:lavalink"
+    name: "ptero:lavalink"
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -36,4 +36,4 @@ jobs:
           platforms: linux/arm64
           push: true
           tags: |
-             ghcr.io/imidnights/yolks:lavalink
+             ghcr.io/imidnights/ptero:lavalink
