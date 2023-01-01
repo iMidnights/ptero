@@ -14,6 +14,8 @@
 
 FROM alpine:latest
 
+RUN echo "deb http://archive.ubuntu.com/ubuntu/ bionic-proposed main" >> /etc/apt/sources.list
+
 RUN apk --update --no-cache add ca-certificates nginx
 RUN apk add php8.1
 RUN apk add php8.1-fpm
