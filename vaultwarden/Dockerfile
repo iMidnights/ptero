@@ -3,7 +3,7 @@ FROM        --platform=$TARGETOS/$TARGETARCH vaultwarden/server:latest
 LABEL       author="iMidnight" maintainer="mohaidarus@gmail.com"
 
 RUN         apt update \
-			useradd -m -d /home/container container
+			-d --name vaultwarden -v /vw-data/:/data/ -p 1026:1026 vaultwarden/server:latest
 
 USER        container
 ENV         USER=container HOME=/home/container
