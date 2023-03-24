@@ -32,9 +32,9 @@ jobs:
           password: ${{ secrets.REGISTRY_TOKEN }}
       - uses: docker/build-push-action@v3
         with:
-          context: ./dbd
+          context: ./vaultwarden
           file: ./vaultwarden/Dockerfile
           platforms: linux/arm64
           push: true
           tags: |
-            ghcr.io/imidnights/vaultwarden:dbd
+            ghcr.io/imidnights/ptero:vaultwarden
