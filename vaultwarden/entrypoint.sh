@@ -9,4 +9,4 @@ export INTERNAL_IP
 MODIFIED_STARTUP=$(echo -e ${STARTUP} | sed -e 's/{{/${/g' -e 's/}}/}/g')
 
 # Run the Server
-eval ${MODIFIED_STARTUP}
+eval docker run -d --name vaultwarden -v /vw-data/:/data/ -p 1026:1026 vaultwarden/server:latest
