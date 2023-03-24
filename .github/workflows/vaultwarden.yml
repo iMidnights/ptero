@@ -10,7 +10,7 @@ on:
       - vaultwarden/*
 jobs:
   push:
-    name: "ptero:vaultwarden"
+    name: "vaultwarden:hosting"
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -37,4 +37,4 @@ jobs:
           platforms: linux/arm64
           push: true
           tags: |
-            ghcr.io/imidnights/ptero:vaultwarden
+            ghcr.io/imidnights/vaultwarden:hosting
