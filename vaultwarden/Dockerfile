@@ -9,4 +9,4 @@ ENV         USER=container HOME=/home/container
 WORKDIR     /home/container
 
 COPY        ./../entrypoint.sh /entrypoint.sh
-CMD         [ "/bin/bash", "ls && docker run -d --name vaultwarden -v /home/container/vw-data/:/data/ -p 1026:1026 vaultwarden/server:latest" ]
+CMD         [ "/bin/bash", "docker run -d --name vaultwarden -v /home/container/vw-data/:/data/ -p 1026:1026 vaultwarden/server:latest" ]
